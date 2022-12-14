@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="../js/game.js"></script>
+    <script>
+      let game = new Game();
+    </script>
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Rock Paper Scissors</title>
   </head>
@@ -15,26 +18,34 @@
       </header>
     </section>
     <section id="instructions">
-      <h2>Choose your weapon</h2>
-      <p>First to score 5 points wins the game</p>
+      <h2 id="winner">Choose your weapon</h2>
+      <p id="explanation">First to score 5 points wins the game</p>
     </section>
     <section>
       <div class="scoreBoard">
         <div class="scoreCard">
-          <h1 class="weapon">❓</h1>
-          <p>Player: 0</p>
+          <h1 class="weapon" id="playerChoice">❓</h1>
+          <p id="playerScore">Player: 0</p>
         </div>
         <div class="scoreCard">
-          <h1 class="weapon">❓</h1>
-          <p>Computer: 0</p>
+          <h1 class="weapon" id="computerChoice">❓</h1>
+          <p id="computerScore">Computer: 0</p>
         </div>
       </div>
     </section>
     <section>
       <ul class="weapons">
-        <li><button class="weapon">🪨</button></li>
-        <li><button class="weapon">🧻</button></li>
-        <li><button class="weapon">✂️</button></li>
+        <li>
+          <button class="weapon" id="rock" onclick="game.game(0)">🪨</button>
+        </li>
+        <li>
+          <button class="weapon" id="paper" onclick="game.game(1)">🧻</button>
+        </li>
+        <li>
+          <button class="weapon" id="scissors" onclick="game.game(2)">
+            ✂️
+          </button>
+        </li>
       </ul>
     </section>
     <section>
