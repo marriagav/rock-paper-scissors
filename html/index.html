@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="../js/game.js"></script>
-    <script>
-      let game = new Game();
-    </script>
+    <script defer type="text/javascript" src="../js/game.js"></script>
     <link rel="stylesheet" href="../css/styles.css" />
     <title>Rock Paper Scissors</title>
   </head>
@@ -36,15 +33,13 @@
     <section>
       <ul class="weapons">
         <li>
-          <button class="weapon" id="rock" onclick="game.game(0)">🪨</button>
+          <button class="weapon" id="rock">🪨</button>
         </li>
         <li>
-          <button class="weapon" id="paper" onclick="game.game(1)">🧻</button>
+          <button class="weapon" id="paper">🧻</button>
         </li>
         <li>
-          <button class="weapon" id="scissors" onclick="game.game(2)">
-            ✂️
-          </button>
+          <button class="weapon" id="scissors">✂️</button>
         </li>
       </ul>
     </section>

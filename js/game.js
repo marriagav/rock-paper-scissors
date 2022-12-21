@@ -114,3 +114,20 @@ class Game {
     game = new Game();
   }
 }
+
+let game = new Game();
+
+const options = document.querySelectorAll(".weapon");
+
+options.forEach((weapon) => weapon.addEventListener("click", playRound));
+
+function playRound(e) {
+  const weapon = this.id;
+  if (weapon == "rock") {
+    game.game(0);
+  } else if (weapon == "paper") {
+    game.game(1);
+  } else if (weapon == "scissors") {
+    game.game(2);
+  }
+}
